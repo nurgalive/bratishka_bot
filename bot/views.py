@@ -63,3 +63,8 @@ def webhook_message(request):
         return HttpResponse('OK')
     else:
         return HttpResponseBadRequest('Malformed or incomplete JSON data received')
+
+def message_list(request):
+    #users = User.objects.all()
+    messages = Message.objects.all()
+    return render(request, 'bot/message_list.html', {'messages' : messages})

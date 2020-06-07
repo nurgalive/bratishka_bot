@@ -1,0 +1,14 @@
+{% extends 'bot/base.html' %}
+
+{% block content %}
+    {% for message in messages %}
+        <div class="message">
+            <div class="date">
+                {{ message.date }}
+            </div>
+            <h3>{{ message.sender.first_name }} {{ message.sender.last_name }}</h3>
+            <p>{{ message.text|linebreaksbr }}</p>
+            <hr>
+        </div>
+    {% endfor %}
+{% endblock %}

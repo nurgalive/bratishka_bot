@@ -4,4 +4,5 @@ from . import views
 
 urlpatterns = [
     path('hello/', views.index),
+    path('webhook/', views.webhook_message),
 ]

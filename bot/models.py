@@ -6,7 +6,7 @@ class User(models.Model):
     first_name  = models.CharField(max_length=64)
     last_name   = models.CharField(max_length=64)
 
-    def __str__(str):
+    def __str__(self):
         return f'{self.first_name} {self.last_name}'
 
 class Message(models.Model):
